@@ -1,27 +1,169 @@
-
 <!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Kirby Cafe | Katherine Carrera 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
 </head>
+<style>
 
+	body{
+	margin: 0;
+	background-color:rgb(237, 171, 184);
+  font-family: 'Fredoka', sans-serif;
+  background: linear-gradient(to bottom, #f8b6c1, #fcdde3);
+	}
+	wrapper{
+	width: 800px;
+	margin:auto;
+	padding:20px;
+	border:1px solid rgba(0,0,0,0.1);
+	}
+	
+	header {
+  text-align: center;
+}
+
+header img {
+  width: 900px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+	h1{text-align:center;
+		font-size: 60px;
+		letter-spacing:2px;
+		color: whitesmoke;
+	}
+	h2{
+		text-align:center;
+  font-size:36px;
+  color:rgb(222, 27, 33);
+  text-shadow: 2px 2px white;
+	}
+	h4{
+		text-align:center;
+  font-size:36px;
+  color:rgb(222, 27, 33);
+  text-shadow: 2px 2px white;	
+	}
+	
+	h3 {
+  text-align:center;
+  font-size:36px;
+  color:rgb(222, 27, 33);
+  text-shadow: 2px 2px white;
+}
+	
+	section {
+  text-align: center;
+	}
+		
+img {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+	
+.info-box {
+  position: relative;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.side-kirby {
+  position: absolute;
+  left: 57%;
+  top: -30px;
+  transform: translateX(180px);
+  width: 200px;
+
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.25));
+}
+.info-text {
+  background: linear-gradient(to bottom, #ffffff, #ffe4ec);
+  padding: 15px 35px;
+  border-radius: 50px;
+  display: inline-block;
+  border: 3px solid #ff8fb1;
+
+  box-shadow: 
+    0 6px 0 #ff8fb1,;
+    0 10px 20px rgba(0,0,0,0.15);
+
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+.info-text:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 9px 0 #ff8fb1,
+    0 14px 25px rgba(0,0,0,0.2);
+}
+
+.info-text:active {
+  transform: translateY(3px);
+  box-shadow: 
+    0 2px 0 #ff8fb1,
+    0 5px 10px rgba(0,0,0,0.15);
+}
+
+header img {
+  box-shadow: none;
+}
+
+.side-kirby {
+  box-shadow: none;
+}
+footer {
+  background: linear-gradient(to right, #ffb6c1, #ffc8d6);
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 25px 25px 0 0;
+  text-align: center;
+  color: #6b3e4e;
+  font-size: 14px;
+  border-top: 4px solid #ff8fb1;
+}
+section {
+  margin-bottom: 40px;
+}
+	</style>
 	
 <body>
 <wrapper>
 	<header>
-	<h1>Kirby Cafe</h1>
+	<img src="kirby title.png">
 		</header>
 	<main>
-	<h2>Delicious Times,<br> Precious Memroies</h2>
+		<h2>Delicious Times,<br> Precious Memories</h2>
+<section class="info-box">
+  <img class="side-kirby" src="kirby carr.png">
+  <div class="info-text">
+    <h4>Location Take-Out Information</h4>
+  </div>
+</section>
 		<section>
 	<h3>Foods</h3>
+<img class="food-img" src="kirby chef.jpg">
+<img class="food-img" src="kirby burger.jpg">
 		</section>
 		<section>
 	<h3>Drinks</h3>
+		<img src="kirby sparkling.jpg">
+		<img src="kirby orange.jpg">
 		</section>
 		<section>
 	<h3>Desserts</h3>
+		<img src="kirby icecream.jpg">
+		<img src="kirby fondue.jpg">
 		</section>
 	</main>
 	
