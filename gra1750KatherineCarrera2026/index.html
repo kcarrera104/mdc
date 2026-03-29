@@ -2,91 +2,74 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kirby Cafe | Katherine Carrera 2026</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
-</head>
+
 <style>
 
-	body{
-	margin: 0;
-	background-color:rgb(237, 171, 184);
+body {
+  margin: 0;
   font-family: 'Fredoka', sans-serif;
-  background: linear-gradient(to bottom, #f8b6c1, #fcdde3);
-	}
-	wrapper{
-	width: 800px;
-	margin:auto;
-	padding:20px;
-	border:1px solid rgba(0,0,0,0.1);
-	}
+  background-image: url("pattern pink.jpg")
+}
+
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
 	
-	header {
+.menu-pyramid {
+  margin-left: 20px;
+}
+	
+.wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
   text-align: center;
 }
 
 header img {
-  width: 900px;
-  height: auto;
-  display: block;
-  margin: 0 auto 10px auto;
-}
-	h1{text-align:center;
-		font-size: 60px;
-		letter-spacing:2px;
-		color: whitesmoke;
-	}
-	h2{
-		text-align:center;
-  font-size:36px;
-  color:rgb(222, 27, 33);
-  text-shadow: 2px 2px white;
-	}
-	h4{
-		text-align:center;
-  font-size:36px;
-  color:rgb(222, 27, 33);
-  text-shadow: 2px 2px white;	
-	}
-	
-	h3 {
-  text-align:center;
-  font-size:36px;
-  color:rgb(222, 27, 33);
-  text-shadow: 2px 2px white;
-}
-	
-	section {
-  text-align: center;
-	}
-		
-img {
   width: 100%;
-  max-width: 300px;
-  margin: 10px;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-  transition: transform 0.2s;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto 10px auto;
+  display: block;
 }
 
-img:hover {
-  transform: scale(1.05);
+	h2 {
+  text-align: center;
+  font-size: 40px;
+  color: rgb(222, 27, 33);
+  text-shadow: 2px 2px white;
 }
-	
+
+h3 {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(222, 27, 33);
+  margin-bottom: 10px;
+}
+
 .info-box {
   position: relative;
   text-align: center;
-  margin: 40px 0;
+  margin: 50px 0;
 }
 
 .side-kirby {
   position: absolute;
-  left: 57%;
+  left: 50%;
   top: -30px;
-  transform: translateX(180px);
-  width: 200px;
-
+  transform: translateX(200px);
+  width: 140px;
   filter: drop-shadow(0 6px 10px rgba(0,0,0,0.25));
 }
+
 .info-text {
   background: linear-gradient(to bottom, #ffffff, #ffe4ec);
   padding: 15px 35px;
@@ -94,36 +77,75 @@ img:hover {
   display: inline-block;
   border: 3px solid #ff8fb1;
 
-  box-shadow: 
-    0 6px 0 #ff8fb1,;
+  box-shadow:
+    0 6px 0 #ff8fb1,
     0 10px 20px rgba(0,0,0,0.15);
 
   transition: all 0.15s ease;
   cursor: pointer;
 }
+
 .info-text:hover {
   transform: translateY(-3px);
-  box-shadow: 
+  box-shadow:
     0 9px 0 #ff8fb1,
     0 14px 25px rgba(0,0,0,0.2);
 }
 
 .info-text:active {
   transform: translateY(3px);
-  box-shadow: 
+  box-shadow:
     0 2px 0 #ff8fb1,
     0 5px 10px rgba(0,0,0,0.15);
 }
 
-header img {
-  box-shadow: none;
+.info-text h4 {
+  margin: 0;
+  font-size: 24px;
+  color: rgb(222, 27, 33);
 }
 
-.side-kirby {
-  box-shadow: none;
+section {
+  margin: 60px 0;
 }
+
+.menu-pyramid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.top-row {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.bottom-img {
+  width: 280px;
+}
+
+.food-img {
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+
+  background: white;
+  padding: 10px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+	
+.food-img:hover {
+  transform: translateY(-8px);
+}
+
 footer {
-  background: linear-gradient(to right, #ffb6c1, #ffc8d6);
+  background: linear-gradient(to right, #f2c9d5, #ffc8d6);
   margin-top: 40px;
   padding: 20px;
   border-radius: 25px 25px 0 0;
@@ -132,45 +154,94 @@ footer {
   font-size: 14px;
   border-top: 4px solid #ff8fb1;
 }
-section {
-  margin-bottom: 40px;
+
+footer p {
+  max-width: 600px;
+  margin: 10px auto;
+  line-height: 1.5;
 }
-	</style>
-	
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .side-kirby {
+    display: none;
+  }
+
+  .food-img {
+    width: 90%;
+    height: auto;
+  }
+}
+
+</style>
+</head>
+
 <body>
-<wrapper>
-	<header>
-	<img src="kirby title.png">
-		</header>
-	<main>
-		<h2>Delicious Times,<br> Precious Memories</h2>
+
+<div class="wrapper">
+
+<header>
+  <img src="kirby title.png">
+</header>
+
+<main>
+
+<h2>Delicious Times,<br> Precious Memories</h2>
+
 <section class="info-box">
   <img class="side-kirby" src="kirby carr.png">
   <div class="info-text">
     <h4>Location Take-Out Information</h4>
   </div>
 </section>
-		<section>
-	<h3>Foods</h3>
-<img class="food-img" src="kirby chef.jpg">
-<img class="food-img" src="kirby burger.jpg">
-		</section>
-		<section>
-	<h3>Drinks</h3>
-		<img src="kirby sparkling.jpg">
-		<img src="kirby orange.jpg">
-		</section>
-		<section>
-	<h3>Desserts</h3>
-		<img src="kirby icecream.jpg">
-		<img src="kirby fondue.jpg">
-		</section>
-	</main>
-	
-	<footer>
+
+<section>
+  <h3>Foods</h3>
+
+  <div class="menu-pyramid">
+    <div class="top-row">
+      <img class="food-img" src="kirby chef.jpg">
+      <img class="food-img" src="kirby burger.jpg">
+    </div>
+
+    <img class="food-img bottom-img" src="kirby burger 2.jpg">
+  </div>
+
+</section>
+<section>
+  <h3>Drinks</h3>
+
+  <div class="menu-pyramid">
+    <div class="top-row">
+      <img class="food-img" src="kirby sparkling.jpg">
+      <img class="food-img" src="kirby orange.jpg">
+    </div>
+
+    <img class="food-img bottom-img" src="cocktail.jpg">
+  </div>
+
+</section>
+<section>
+  <h3>Desserts</h3>
+
+  <div class="menu-pyramid">
+    <div class="top-row">
+      <img class="food-img" src="kirby icecream.jpg">
+      <img class="food-img" src="kirby fondue.jpg">
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
   <p>&#169; 2026, Katherine Carrera</p>
-  <p>This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+  <p>This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental.</p>
 </footer>
-	</wrapper>
+
+</div>
+
 </body>
 </html>
