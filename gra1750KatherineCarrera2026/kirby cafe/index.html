@@ -160,18 +160,20 @@ footer p {
   margin: 10px auto;
   line-height: 1.5;
 }
+	section img{
+		display:block;
+		margin: auto;
+	}
 
-/* MOBILE */
-@media (max-width: 600px) {
-  .side-kirby {
-    display: none;
+@media (min-width: 1200px) {
+	.wrapper {
+		width: 1200px;
+		text-align: center;
+	}
+	section img{
+		display:inline;
+	}
   }
-
-  .food-img {
-    width: 90%;
-    height: auto;
-  }
-}
 
 </style>
 </head>
@@ -198,39 +200,22 @@ footer p {
 <section>
   <h3>Foods</h3>
 
-  <div class="menu-pyramid">
-    <div class="top-row">
       <img class="food-img" src="kirby chef.jpg">
       <img class="food-img" src="kirby burger.jpg">
-    </div>
-
-    <img class="food-img bottom-img" src="kirby burger 2.jpg">
-  </div>
 
 </section>
 <section>
   <h3>Drinks</h3>
 
-  <div class="menu-pyramid">
-    <div class="top-row">
       <img class="food-img" src="kirby sparkling.jpg">
       <img class="food-img" src="kirby orange.jpg">
-    </div>
-
-    <img class="food-img bottom-img" src="cocktail.jpg">
-  </div>
 
 </section>
 <section>
   <h3>Desserts</h3>
 
-  <div class="menu-pyramid">
-    <div class="top-row">
       <img class="food-img" src="kirby icecream.jpg">
       <img class="food-img" src="kirby fondue.jpg">
-    </div>
-
-  </div>
 
 </section>
 
