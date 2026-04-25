@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>La La Land</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background-image: url("lalalandd.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.stars::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow:
+        100px 200px white,
+        300px 150px white,
+        500px 300px white,
+        800px 100px white,
+        1200px 250px white,
+        200px 400px white,
+        900px 350px white,
+        600px 200px white,
+        400px 100px white;
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.2; }
+    to { opacity: 1; }
+}
+
+.lamp {
+    position: fixed;
+    bottom: 0;
+    right: 150px;
+    width: 10px;
+    height: 260px;
+    background: black;
+    z-index: 1;
+}
+
+.lamp::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -15px;
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 50%;
+}
+
+.lamp::after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: 70px;
+    height: 70px;
+    background: rgba(255,255,200,0.25);
+    border-radius: 50%;
+    filter: blur(12px);
+}
+
+.wrapper {
+    width: 1366px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+header {
+    padding: 30px 0;
+    background: rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 70px;
+    letter-spacing: 4px;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 15px 0;
+    background: rgba(0,0,0,0.4);
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.text-content {
+    width: 30%;
+}
+
+.text-content h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.center-box {
+    width: 700px;
+    height: 400px;
+    margin: 0 40px;
+    border: 2px solid white;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+    overflow: hidden;
+}
+
+.center-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    padding: 40px 0;
+    font-size: 12px;
+    line-height: 1.5;
+    background: rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="overlay"></div>
+<div class="stars"></div>
+<div class="lamp"></div>
+
+<div class="wrapper">
+
+<header>
+    <h1>La La Land</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Soundtrack</a>
+    <a href="#">Cast</a>
+    <a href="#">Tickets</a>
+</nav>
+
+<div class="main">
+
+    <div class="text-content">
+        <h2>Mia & Sebastian</h2>
+        <p>
+             Aspiring actress Mia and traditional jazz pianist Sebastian fall in love while struggling to break through in Los Angeles. As they achieve success, their dedication to their art creates distance, forcing them to choose between their relationship and their ambitions.
+        </p>
+    </div>
+
+    <div class="center-box">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg7RfNEIVwCsB2-YSJff5r3Af4WNf1K0Jxtby-Dnw1Lh3vEe5AqWUUZXQNhEAVaBvw8-3iI9kKk_8TQlhigxjuEYrBwIX82BJEdTBhgrForigbvu6EHv_oWQepFi9H5qt2ZqqaOT2yv6yrU/s1600/la+la+land+1.gif" alt="La La Land Scene">
+    </div>
+
+</div>
+
+<footer>
+<p>&#169; 2026, Katherine Carrera</p>
+  <p>This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+</footer>
+
+</div>
+
+</body>
+</html>
